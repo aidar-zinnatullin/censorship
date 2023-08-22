@@ -17,7 +17,7 @@ library(here)
 library(tidyverse)
 library(ggthemes)
 
-load(here("censorship_2", "V-Dem-CY-Core_csv_v13", "Shortened_Version.RData"))
+load(here("censorship", "V-Dem-CY-Core_csv_v13", "Shortened_Version.RData"))
 
 # Data for Russia
 Russia_internet_censorship <- as.data.frame(v_dem[v_dem$country_id == 11, c("year", "v2mecenefi")])
@@ -57,5 +57,5 @@ ggplot(pooling_int, aes(year,v2mecenefi))+
   theme_classic()
 #  ggtitle("Internet censorship effors in Russia, Ukraine, and Estonia after the USSR collapse", subtitle = "Varieties of Democracy project data")
 
-ggsave(here("censorship_2", "Figures", "Figure Censorship.jpeg"), width = 12, height = 8, dpi = 300)
+ggsave(here("censorship", "Figures", "Figure Censorship.jpeg"), width = 12, height = 8, dpi = 300)
 
