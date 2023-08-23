@@ -71,8 +71,8 @@ ggplot(pooling_int, aes(year,v2mecenefi))+
   theme(axis.text.x = element_text(angle = 40), legend.position="bottom")+
   scale_color_discrete(name="Countries")+
   guides(colour = guide_legend(override.aes = list(size=4))) + 
-  theme_classic()+
-  ggtitle("Internet censorship effors in Russia, Ukraine, and Estonia after the USSR collapse", subtitle = "Varieties of Democracy project data")
+  theme_classic()
+#  ggtitle("Internet censorship effors in Russia, Ukraine, and Estonia after the USSR collapse", subtitle = "Varieties of Democracy project data")
 
 ggsave(here("Figures", "Figure Censorship.jpeg"), width = 12, height = 8, dpi = 300)
 
