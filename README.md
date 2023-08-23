@@ -1,4 +1,4 @@
-# Censorship in three countries
+# Censorship and Freedom of Expression in Three Countries
 
 The visualization is based on the data provided by the V-Dem project <https://www.v-dem.net/data/the-v-dem-dataset/country-year-v-dem-core-v13/>
 
