@@ -47,7 +47,6 @@ library(here)
 library(tidyverse)
 library(ggthemes)
 
-v_dem <-read.csv("/Users/aidarzinnatullin/Downloads/V-Dem-CY-Core_csv_v13/V-Dem-CY-Core-v13.csv",na.strings = "..", comment.char = '#')
 load(here("V-Dem-CY-Core_csv_v13", "Shortened_version_freedom_expression.RData"))
 
 # Data for Russia
