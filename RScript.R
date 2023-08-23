@@ -13,11 +13,28 @@
 # 2 (3): The government allows Internet access, including to some sites that are critical of the government, but blocks selected sites that deal with especially politically sensitive issues.
 # 3 (4): The government allows Internet access that is unrestricted, with the exceptions mentioned above.
 
+# sessionInfo()
+# R version 4.2.2 (2022-10-31)
+# Platform: aarch64-apple-darwin20 (64-bit)
+# Running under: macOS Ventura 13.4.1
+# 
+# Matrix products: default
+# LAPACK: /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/lib/libRlapack.dylib
+# 
+# locale:
+#   [1] ru_RU.UTF-8/ru_RU.UTF-8/ru_RU.UTF-8/C/ru_RU.UTF-8/ru_RU.UTF-8
+# 
+# attached base packages:
+#   [1] stats     graphics  grDevices utils     datasets  methods   base     
+# 
+# loaded via a namespace (and not attached):
+#   [1] compiler_4.2.2  tools_4.2.2     rstudioapi_0.14
+
 library(here)
 library(tidyverse)
 library(ggthemes)
 
-load(here("censorship", "V-Dem-CY-Core_csv_v13", "Shortened_Version.RData"))
+load(here("V-Dem-CY-Core_csv_v13", "Shortened_Version.RData"))
 
 # Data for Russia
 Russia_internet_censorship <- as.data.frame(v_dem[v_dem$country_id == 11, c("year", "v2mecenefi")])
@@ -57,5 +74,5 @@ ggplot(pooling_int, aes(year,v2mecenefi))+
   theme_classic()
 #  ggtitle("Internet censorship effors in Russia, Ukraine, and Estonia after the USSR collapse", subtitle = "Varieties of Democracy project data")
 
-ggsave(here("censorship", "Figures", "Figure Censorship.jpeg"), width = 12, height = 8, dpi = 300)
+ggsave(here("Figures", "Figure Censorship.jpeg"), width = 12, height = 8, dpi = 300)
 
